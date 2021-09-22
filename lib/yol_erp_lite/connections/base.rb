@@ -26,7 +26,7 @@ module YolErpLite
         else
           access_token = redis.get("erp_lite_access_token")
           if access_token.nil?
-            access_token = redis.get("erp_lite_access_token")
+            access_token = get_token(corpsecret)
             if access_token.nil?
               raise Exception.new("ErpLite access token authorize false, corpsecret: #{corpsecret}")
             else
