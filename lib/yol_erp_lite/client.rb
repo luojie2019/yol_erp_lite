@@ -7,6 +7,7 @@ module YolErpLite
     include Connection::Base
     include Connection::Customer
     include Connection::Material
+    include Connection::Bom
     
     attr_accessor :host, :corpsecret, :redis
 
